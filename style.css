@@ -1,23 +1,30 @@
 :root {
-  --c-gold: #D4AF37;
+  --c-gold: #d4af37;
   --i-diamond: url("data:image/svg+xml,%3Csvg viewBox='0 0 9.899 9.899' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m-397.55-23.776 5.774 5.774 5.774-5.774-5.774-5.774-5.774 5.774Zm441.547 0-5.773-5.774-5.773 5.774 5.773 5.774 5.773-5.774ZM4.95 0 9.9 4.95 4.95 9.9 0 4.95Zm-396.726-22.776h430v-2h-430v2Z' fill='%23D4AF37' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "ProtoMono-Regular", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #D4AF37;
+  font-family: 'ProtoMono-Regular', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+    sans-serif;
+  color: #d4af37;
 }
 
 h1 {
-/*   TODO: make relative */
-  margin: 0 12px;display: flex;align-content: center;
+  /*   TODO: make relative */
+  margin: 0 12px;
+  display: flex;
+  align-content: center;
 }
 
 h1 span {
   font-size: clamp(48px, 26vw, 200px);
+}
+
+p + p {
+  margin-top: 24px;
 }
 
 h1 svg {
@@ -38,31 +45,42 @@ h2 time {
 
 h2 {
   margin: 48px 0;
-  /* line-height: 32px; */
-  /* overflow: hidden; */
-  /* text-align: center; */
-  /* display: block; */
-  /* white-space: nowrap; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* margin-left: -150px; */
+  font-size: clamp(32px, 6.5vw, 72px);
 }
-
 
 html {
   min-height: 100%;
   font-size: 24px;
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(20px, 3vw, 24px);
   background: #000;
 }
 
 body {
   margin: 0 auto;
   max-width: 1440px;
+  padding-bottom: 180px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 194 103' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='a' fill='%23fff'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.287 72.057v23.771l33.428-11.886v36.4l29.715-11.885v-36.4L96.858 60.17V36.4L63.43 48.286V35.657l33.428-11.886V0L33.715 23.771v36.4L.288 72.057Zm130-23.77L96.858 36.4v23.77l33.429 11.887v36.399l29.714 11.886v-36.4l33.428 11.886V72.058l-33.428-11.886V47.543l33.428 11.886V35.658l-63.142-23.772v36.4Z'/%3E%3C/mask%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.287 72.057v23.771l33.428-11.886v36.4l29.715-11.885v-36.4L96.858 60.17V36.4L63.43 48.286V35.657l33.428-11.886V0L33.715 23.771v36.4L.288 72.057Zm130-23.77L96.858 36.4v23.77l33.429 11.887v36.399l29.714 11.886v-36.4l33.428 11.886V72.058l-33.428-11.886V47.543l33.428 11.886V35.658l-63.142-23.772v36.4Z' fill='%23000'/%3E%3Cpath d='M.287 95.828h-4v5.668l5.34-1.899-1.34-3.769Zm0-23.771-1.34-3.77-2.66.947v2.823h4Zm33.428 11.885h4v-5.667l-5.34 1.899 1.34 3.768Zm0 36.4h-4v5.908l5.486-2.194-1.486-3.714Zm29.715-11.885 1.485 3.714 2.515-1.006v-2.708h-4Zm0-36.4-1.34-3.77-2.66.947v2.823h4ZM96.858 60.17l1.34 3.769 2.66-.946v-2.823h-4Zm0-23.771h4v-5.668l-5.34 1.899 1.34 3.769ZM63.43 48.286h-4v5.667l5.34-1.899-1.34-3.769Zm0-12.629-1.34-3.769-2.66.946v2.823h4Zm33.428-11.886 1.34 3.77 2.66-.947v-2.823h-4Zm0-23.771h4v-5.78l-5.41 2.037L96.859 0ZM33.715 23.771l-1.409-3.743-2.59.975v2.768h4Zm0 36.4 1.34 3.769 2.66-.946v-2.823h-4Zm63.143-23.77 1.34-3.77-5.34-1.898v5.668h4Zm33.429 11.885-1.34 3.77 5.34 1.898v-5.668h-4ZM96.858 60.172h-4v2.823l2.66.946 1.34-3.77Zm33.429 11.886h4v-2.824l-2.66-.945-1.34 3.769Zm0 36.399h-4v2.708l2.514 1.006 1.486-3.714Zm29.714 11.886-1.486 3.714 5.486 2.194v-5.908h-4Zm0-36.4 1.34-3.769-5.34-1.898v5.667h4Zm33.428 11.886-1.34 3.769 5.34 1.898v-5.667h-4Zm0-23.771h4v-2.824l-2.66-.945-1.34 3.769Zm-33.428-11.886h-4v2.823l2.66.946 1.34-3.77Zm0-12.629 1.34-3.768-5.34-1.9v5.668h4Zm33.428 11.886-1.34 3.769 5.34 1.899v-5.668h-4Zm0-23.771h4v-2.769l-2.59-.975-1.41 3.744Zm-63.142-23.772 1.409-3.743-5.409-2.037v5.78h4Zm-126 83.942V72.057h-8v23.771h8Zm28.089-15.654L-1.053 92.059l2.68 7.538 33.429-11.886-2.68-7.537Zm5.34 40.168v-36.4h-8v36.4h8Zm24.228-15.599L32.23 116.628l2.971 7.428 29.714-11.885-2.97-7.428ZM59.43 72.057v36.4h8v-36.4h-8Zm36.088-15.655L62.09 68.288l2.68 7.538L98.198 63.94l-2.68-7.538ZM92.858 36.4V60.17h8V36.4h-8ZM64.77 52.054 98.198 40.17l-2.68-7.538L62.09 44.517l2.68 7.537Zm-5.34-16.397v12.629h8V35.657h-8Zm36.088-15.654L62.09 31.888l2.68 7.538L98.198 27.54l-2.68-7.537ZM92.858 0v23.771h8V0h-8ZM35.125 27.515 98.267 3.744 95.45-3.744 32.306 20.028l2.819 7.487Zm2.59 32.656v-36.4h-8v36.4h8ZM1.627 75.826 35.056 63.94l-2.68-7.538-33.429 11.886 2.68 7.538Zm93.891-35.657 33.429 11.886 2.68-7.538-33.429-11.885-2.68 7.537Zm5.34 20.003V36.4h-8v23.77h8Zm30.769 8.117L98.198 56.403l-2.68 7.538 33.429 11.885 2.68-7.537Zm2.66 40.168v-36.4h-8v36.4h8Zm27.2 8.172-29.715-11.886-2.971 7.428 29.714 11.886 2.972-7.428Zm-5.486-32.686v36.4h8v-36.4h-8Zm38.768 8.117-33.428-11.886-2.68 7.538 33.428 11.886 2.68-7.538Zm-5.34-20.002v23.77h8v-23.77h-8Zm-30.768-8.117 33.428 11.885 2.68-7.537-33.428-11.886-2.68 7.538Zm-2.66-16.398v12.629h8V47.543h-8Zm38.768 8.117-33.428-11.885-2.68 7.537 33.428 11.886 2.68-7.538Zm-5.34-20.002v23.771h8V35.658h-8ZM128.878 15.63 192.02 39.4l2.819-7.487-63.143-23.771-2.818 7.487Zm5.409 32.656v-36.4h-8v36.4h8Z' fill='%23D4AF37' mask='url(%23a)'/%3E%3Cmask id='b' fill='%23fff'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M96.858 107.714v23.771l33.429-11.885V156l29.714-11.886v-36.4l33.428-11.886v-23.77l-33.428 11.885V71.314l33.428-11.885V35.657L130.287 59.43v36.4l-33.429 11.885ZM.288 72.058v23.771l33.428 11.886v36.4L63.43 156v-36.4l33.428 11.886v-23.771L63.43 95.829V83.201l33.428 11.885V71.315L33.715 47.544v36.4L.288 72.057Z'/%3E%3C/mask%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M96.858 107.714v23.771l33.429-11.885V156l29.714-11.886v-36.4l33.428-11.886v-23.77l-33.428 11.885V71.314l33.428-11.885V35.657L130.287 59.43v36.4l-33.429 11.885ZM.288 72.058v23.771l33.428 11.886v36.4L63.43 156v-36.4l33.428 11.886v-23.771L63.43 95.829V83.201l33.428 11.885V71.315L33.715 47.544v36.4L.288 72.057Z' fill='%23000'/%3E%3Cpath d='M96.858 131.485h-4v5.668l5.34-1.899-1.34-3.769Zm0-23.771-1.34-3.769-2.66.946v2.823h4Zm33.429 11.886h4v-5.668l-5.34 1.899 1.34 3.769Zm0 36.4h-4v5.908l5.485-2.195-1.485-3.713Zm29.714-11.886 1.486 3.714 2.514-1.006v-2.708h-4Zm0-36.4-1.34-3.769-2.66.946v2.823h4Zm33.428-11.886 1.34 3.77 2.66-.947v-2.823h-4Zm0-23.77h4v-5.669l-5.34 1.9 1.34 3.768Zm-33.428 11.885h-4v5.667l5.34-1.898-1.34-3.77Zm0-12.629-1.34-3.769-2.66.946v2.823h4Zm33.428-11.885 1.34 3.768 2.66-.945v-2.824h-4Zm0-23.772h4v-5.78l-5.409 2.037 1.409 3.743ZM130.287 59.43l-1.409-3.744-2.591.975v2.769h4Zm0 36.4 1.34 3.768 2.66-.945v-2.824h-4Zm-130 0h-4v2.823l2.66.946 1.34-3.769Zm0-23.771 1.34-3.77-5.34-1.898v5.668h4Zm33.428 35.657h4v-2.823l-2.66-.946-1.34 3.769Zm0 36.4h-4v2.708l2.515 1.006 1.486-3.714ZM63.43 156l-1.486 3.714 5.486 2.194V156h-4Zm0-36.4 1.34-3.768-5.34-1.899v5.667h4Zm33.428 11.886-1.34 3.769 5.34 1.899v-5.668h-4Zm0-23.771h4v-2.823l-2.66-.946-1.34 3.769ZM63.43 95.829h-4v2.823l2.66.946 1.34-3.769Zm0-12.628 1.34-3.77-5.34-1.898v5.668h4Zm33.428 11.885-1.34 3.77 5.34 1.898v-5.668h-4Zm0-23.771h4v-2.768l-2.59-.976-1.41 3.744ZM33.715 47.544l1.41-3.744-5.41-2.036v5.78h4Zm0 36.4-1.34 3.768 5.34 1.899v-5.668h-4Zm67.143 47.541v-23.771h-8v23.771h8Zm28.089-15.654-33.429 11.885 2.68 7.538 33.429-11.885-2.68-7.538Zm5.34 40.169v-36.4h-8V156h8Zm24.228-15.6-29.714 11.886 2.971 7.427 29.715-11.885-2.972-7.428Zm-2.514-32.686v36.4h8v-36.4h-8Zm36.088-15.654-33.428 11.885 2.68 7.538 33.428-11.886-2.68-7.537Zm-2.66-20.003v23.771h8v-23.77h-8Zm-28.088 15.655 33.428-11.886-2.68-7.538-33.428 11.886 2.68 7.538Zm-5.34-16.398v12.629h8V71.314h-8Zm36.088-15.654-33.428 11.885 2.68 7.538 33.428-11.886-2.68-7.537Zm-2.66-20.003V59.43h8V35.657h-8Zm-57.733 27.515 63.143-23.771-2.819-7.487-63.142 23.771 2.818 7.487Zm2.591 32.656v-36.4h-8v36.4h8Zm-36.089 15.655 33.429-11.886-2.68-7.537-33.429 11.885 2.68 7.538ZM4.288 95.829V72.058h-8v23.771h8Zm30.768 8.117L1.627 92.06l-2.68 7.538 33.429 11.886 2.68-7.538Zm2.66 40.169v-36.4h-8v36.4h8Zm27.2 8.171L35.2 140.401l-2.971 7.428 29.714 11.885 2.971-7.428ZM59.43 119.6V156h8v-36.4h-8Zm38.768 8.117L64.77 115.832l-2.68 7.537 33.428 11.886 2.68-7.538Zm-5.34-20.002v23.771h8v-23.771h-8ZM62.09 99.598l33.428 11.886 2.68-7.538L64.77 92.06l-2.68 7.538Zm-2.66-16.397v12.628h8V83.201h-8Zm38.768 8.116L64.77 79.432l-2.68 7.537 33.428 11.886 2.68-7.538Zm-5.34-20.002v23.771h8V71.315h-8ZM32.306 51.287 95.45 75.058l2.818-7.487-63.142-23.77-2.819 7.486Zm5.41 32.656v-36.4h-8v36.4h8Zm-38.769-8.116 33.428 11.885 2.68-7.537L1.628 68.289l-2.68 7.538Z' fill='%23D4AF37' mask='url(%23b)'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: -20% bottom;
+  background-size: 120px;
 }
 
-main {
-  margin: 24px; 
+main,
+footer {
+  margin: 24px;
+}
+
+footer {
+  margin-top: 128px;
+}
+
+footer ul li {
+  border: 0;
+  padding: 0;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 a {
@@ -80,14 +98,13 @@ summary {
 }
 
 .talk dd {
-  color: #C0C0C0;
+  color: #c0c0c0;
   margin-bottom: 24px;
 }
 
 .talk dt {
   margin: 16px 0;
 }
-
 
 .button {
   background: black;
@@ -110,12 +127,12 @@ h2 span {
 }
 
 h2 span:after {
-  content: "•";
+  content: '•';
   margin-left: 12px;
 }
 
 hr {
-  border-color: #D4AF37;
+  border-color: #d4af37;
   border-bottom: 0;
   border-top: 4px solid;
   margin-top: 42px;
@@ -125,43 +142,45 @@ hr {
 ul li {
   list-style: none;
   padding-bottom: 16px;
-  border-bottom: 4px solid #D4AF37;
-  margin-bottom: 16px;
+  border-bottom: clamp(2px, 0.3vw, 4px) solid #d4af37;
+  margin-bottom: clamp(12px, 2.5vw, 24px);
 }
 
 ul li:last-child {
   border-bottom: 0;
 }
 
-
 #intro > * {
   margin: 48px 0;
+  font-size: clamp(20px, 6.5vw, 40px);
 }
 
 #intro ul li {
-  font-size: clamp(20px, 100vw, 24px);
+  font-size: clamp(16px, 2.5vw, 24px);
 }
 
-#schedule ol {
+.shadow ol {
   list-style: none;
-  box-shadow: 4px 4px 0 0 black, 8px 8px 0 0 #FFDC00;
+  box-shadow: 4px 4px 0 0 black, 8px 8px 0 0 #ffdc00;
 }
 
-#schdule details {
-}
-
-#schedule ol li {
+.shadow ol li {
   padding: 24px;
-  border: 4px solid;
+  border: 4px solid var(--c-gold);
   border-bottom: 0;
+  background: black;
 
   /*   lol wat - did this land already in chrome?!?! */
   /*   this only works in Chrome afaik/s - but, I could use a postprocessor, such as
   postcss during a build process to *overwrite* this file with the generated output
   thus giving me support for Firefox, et al */
   &:last-child {
-    border-bottom: 4px solid;
+    border-bottom: 4px solid var(--c-gold);
   }
+}
+
+.shadow ol + ol li:first-child {
+  border-top: 0;
 }
 
 #schedule {
@@ -169,17 +188,19 @@ ul li:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     &:after {
       order: 1;
       width: 100%;
       margin: 0 32px;
-      content: " ";
+      content: ' ';
       display: block;
       height: 12px;
       background-image: url("data:image/svg+xml,%3Csvg class='root' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3Esvg%7Boverflow:visible%7D%3C/style%3E%3Cg id='container' fill='%23D4AF37' fill-rule='nonzero'%3E%3Csvg class='bar' y='50%25'%3E%3Crect y='-1' width='100%25' height='2'/%3E%3C/svg%3E%3Csvg class='left' y='50%25'%3E%3Cpath fill='%23000' d='M0-6h6V6H0z'/%3E%3Cpath d='m0 0 6-6 6 6-6 6'/%3E%3C/svg%3E%3Csvg class='right' y='50%25' x='100%25'%3E%3Cpath fill='%23000' d='M-6-6h6V6h-6z'/%3E%3Cpath d='m-12 0 6-6 6 6-6 6'/%3E%3C/svg%3E%3C/g%3E%3C/svg%3E");
+      justify-self: center;
+      justify-content: center;
     }
-    
+
     :last-child {
       order: 2;
     }
@@ -198,8 +219,16 @@ ul li:last-child {
   }
 }
 
+#locations a {
+}
+
+#locations em {
+  display: block;
+  font-style: normal;
+}
+
 .details > .summary ~ input ~ * {
-    display: none;
+  display: none;
 }
 
 .details .summary ~ input:checked ~ * {
@@ -213,7 +242,6 @@ ul li:last-child {
   padding-left: 24px;
 }
 
-
 .icon.talk {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4S4 1.8 4 4v2c0 2.2 1.8 4 4 4Z' fill='%23D4AF37'/%3E%3Cpath d='M15.9 7.1c.1-.5-.3-1-.8-1.1-.5-.1-1.1.3-1.1.8-.5 3-3 5.2-6 5.2S2.5 9.8 2.1 6.9C2 6.3 1.5 5.9.9 6c-.5.1-.9.6-.8 1.1.5 3.6 3.4 6.3 6.9 6.8V16h2v-2.1c3.5-.4 6.4-3.2 6.9-6.8Z' fill='%23D4AF37'/%3E%3C/svg%3E");
 }
@@ -222,11 +250,63 @@ ul li:last-child {
   background-image: url("data:image/svg+xml,%3Csvg width='14' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 7a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM7 8.5a7.008 7.008 0 0 0-7 7 .5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5 7.008 7.008 0 0 0-7-7Z' fill='%23D4AF37'/%3E%3C/svg%3E");
 }
 
-@media screen and (min-width:768px) {
+/* big display */
+@media screen and (min-width: 768px) {
   #intro {
     display: flex;
     gap: 80px;
     justify-content: space-between;
+  }
+
+  body {
+    background-size: 200px;
+  }
+
+  a {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.5 17.5 15-15m0 0H7.25m11.25 0v11.25' stroke='%23fff' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E");
+    padding-right: 27px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+  }
+
+  h2 {
+    margin-top: 128px;
+  }
+
+  #locations {
+    display: grid;
+    grid-template-areas:
+      'a a'
+      'b c';
+  }
+
+  #locations ol {
+    height: fit-content;
+  }
+
+  #locations h2 {
+    grid-area: a;
+  }
+
+  #venue {
+    grid-area: b;
+  }
+
+  #venue li {
+    border-right: 0;
+  }
+
+  #hotels li {
+    border-top: 4px solid var(--c-gold);
+  }
+
+  #hotels {
+    grid-area: c;
+  }
+
+  #locations a {
+    display: block;
   }
 
   #intro p {
@@ -237,9 +317,44 @@ ul li:last-child {
     flex: 1;
   }
 
-  
-}
+  .shadow ol li {
+    padding: 32px 40px;
+  }
 
-details {
-/*   display: none; */
+  #schedule li {
+    display: grid;
+    gap: 32px 64px;
+    grid-template-areas:
+      'a b'
+      'a c';
+    grid-template-columns: 326px 1fr;
+  }
+
+  #schedule li.break {
+    grid-template-areas: 'a b';
+  }
+
+  rem-details {
+    grid-area: c;
+  }
+
+  #schedule .time {
+    grid-area: a;
+    max-width: 326px;
+    align-self: start;
+  }
+
+  .talk dt {
+    margin-top: 0;
+  }
+
+  #schedule .title {
+    grid-area: b;
+    /* width: 100%; */
+    margin-top: 0px;
+  }
+
+  .time {
+    width: 424px;
+  }
 }
