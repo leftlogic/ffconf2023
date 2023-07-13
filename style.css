@@ -217,6 +217,44 @@ ul li:last-child {
   }
 }
 
+.sponsor {
+  box-shadow: 4px 4px 0 0 black, 8px 8px 0 0 #ffdc00;
+  margin: 48px 0;
+
+  &.platinum h3 {
+    padding: 64px;
+  }
+
+  & h3 {
+    text-align: center;
+    border: 4px solid var(--c-gold);
+    padding: 32px 40px;
+    margin-bottom: 4px;
+  }
+
+  & li {
+    padding: 32px 40px;
+    background-color: var(--c-gold);
+    list-style: none;
+  }
+
+  &.platinum li {
+    padding: 64px 32px;
+  }
+
+  & img {
+    max-height: 64px;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  & a {
+    background: none;
+    padding: 0;
+  }
+}
+
 #locations em {
   display: block;
   font-style: normal;
@@ -257,6 +295,7 @@ ul li:last-child {
   margin-bottom: 28px;
 
   & > a {
+    text-decoration: none;
     background: #f3c633;
     padding: 24px;
     box-shadow: 4px 4px 0 0 black, 8px 8px 0 0 #ffdc00;
@@ -271,7 +310,28 @@ ul li:last-child {
 
     &:hover {
       background-color: #ffdc00;
+      text-decoration: underline;
     }
+  }
+}
+
+.talk img {
+  display: none;
+  grid-area: a;
+  width: 100%;
+  cursor: help;
+  border: 4px solid var(--c-gold);
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
   }
 }
 
@@ -289,6 +349,17 @@ ul li:last-child {
 
 /* big display */
 @media screen and (min-width: 768px) {
+  .sponsors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .talk img {
+    display: block;
+    opacity: 0.5;
+  }
   #intro {
     display: flex;
     gap: 80px;
@@ -402,7 +473,8 @@ ul li:last-child {
     grid-template-areas:
       'a b'
       'a c';
-    grid-template-columns: 326px 1fr;
+/*     grid-template-columns: 326px 1fr; */
+    grid-template-columns: 256px 1fr;
   }
 
   #schedule li.break {
