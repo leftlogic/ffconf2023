@@ -1,3 +1,7 @@
+[hidden] {
+  display: none !important;
+}
+
 :root {
   --c-gold: #d4af37;
   --i-diamond: url("data:image/svg+xml,%3Csvg viewBox='0 0 9.899 9.899' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m-397.55-23.776 5.774 5.774 5.774-5.774-5.774-5.774-5.774 5.774Zm441.547 0-5.773-5.774-5.773 5.774 5.773 5.774 5.773-5.774ZM4.95 0 9.9 4.95 4.95 9.9 0 4.95Zm-396.726-22.776h430v-2h-430v2Z' fill='%23D4AF37' fill-rule='nonzero'/%3E%3C/svg%3E");
@@ -473,7 +477,7 @@ ul li:last-child {
     grid-template-areas:
       'a b'
       'a c';
-/*     grid-template-columns: 326px 1fr; */
+    /*     grid-template-columns: 326px 1fr; */
     grid-template-columns: 256px 1fr;
   }
 
