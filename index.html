@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./rem-details.js" async defer></script>
+    <script type="x-disabled" src="./when-do.mjs" async defer></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
@@ -49,9 +50,10 @@
       <time datetime="2023-11-10T10:00:00">Fri 10 NOV 2023</time>
     </h2>
 
-    <div class="button cta"><a href="https://www.tickettailor.com/events/ffconf2023/951482" target="_blank">Buy tickets
-        @ 249+VAT</a></div>
-
+    <when-do do="show" id="button-when" apply="ease-in" datetime="2023-07-13T17:02 2024">
+      <div class="button cta"><a href="https://www.tickettailor.com/events/ffconf2023/951482" target="_blank">Buy
+          tickets @ 249+VAT</a></div>
+    </when-do>
     <hr>
 
     <main>
@@ -138,20 +140,38 @@
             </rem-details>
           </li>
           <li class="talk">
-            <p class="title">AI: a cautionary tale, but is there real good to be had?</p>
+            <p class="title">The Expanding Dark Forest and Generative AI</p>
             <img src="/images/box.svg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
-                <dd>(TBA/WIP) An exploration of the problems and possible futures of flooding the web with generative AI
-                  content</dd>
+                <dd>The web is losing its vitality due to the presence of bad actors and automated bots. Generative AI
+                  will exacerbate the problem, flooding the internet with low-quality content. Finding original insights
+                  and connecting with real human authors becomes challenging. The distinction between AI and human-made
+                  content raises questions about its significance.</dd>
                 <dt class="icon pronouns">About me</dt>
-                <dd>TBA</dd>
+                <dd>Built an elaborate Neopets page using only the HTML `&lt;table&gt;` element for positioning and
+                  layout. Graduated to maximalist design aesthetics and animated cursors with CSS on MySpace.</dd>
+              </dl>
+            </rem-details>
+          </li>
+          <li class="talk">
+            <p class="title">Future proof CSS</p>
+            <img src="/images/box.svg">
+            <rem-details>
+              <dl slot="details">
+                <dt class="icon talk">The talk</dt>
+                <dd>Plain Old Semantic HTML allows accessible web pages, but CSS and JavaScript can hinder accessibility
+                  by altering element meaning, behavior, or blocking content. Learn how to use them appropriately to
+                  enhance accessibility and adapt experiences for all users</dd>
+                <dt class="icon pronouns">About me</dt>
+                <dd>I was a <em>little</em> too obsessed with Neopets as a teenager and had to build the best profile
+                  page. Once I started down that rabbit hole I was hooked!</dd>
               </dl>
             </rem-details>
           </li>
           <li class="break">
-            <p class="title">4 more speakers to be announced.<br><br>Are our speaker hard to make out or guess? That's
+            <p class="title">3 more speakers to be announced.<br><br>Are our speaker hard to make out or guess? That's
               on purpose, we don't announce our
               speakers right
               away, but if you would rather know you can <a
