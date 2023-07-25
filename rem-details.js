@@ -1,6 +1,6 @@
 // // ES6 class
 
-const css = /* css */`
+const css = /* css */ `
 
   button {
     appearance: none;
@@ -15,7 +15,7 @@ const css = /* css */`
   button:focus [name="summary"] {
     outline: 1px solid blue;
   }
-  
+
   [name="summary"] {
     background: none;
     display: block;
@@ -82,25 +82,25 @@ template.innerHTML = /*html*/ `
     <slot name="details"></slot>
   </div>`;
 
-
 class RemDetails extends HTMLElement {
-
   _open = false;
-  
+
   constructor() {
     super();
-    console.log('construct');
-    
+
     const children = template.content.cloneNode(true);
 
     // parent node gets us the button it's wrapped in
     const summary = children.querySelector('slot[name="summary"]').parentNode;
-    summary.onclick = (e) => this.open = !this.open;
+    summary.onclick = (e) => (this.open = !this.open);
 
     this.details = children.querySelector('slot[name="details"]');
 
     // mode: open - means accessed in user code
-    const shadow = this.attachShadow({ mode: 'open', delegatesFocus: true }).appendChild(children);
+    const shadow = this.attachShadow({
+      mode: 'open',
+      delegatesFocus: true,
+    }).appendChild(children);
 
     const title = this.shadowRoot.host.getAttribute('title');
 
@@ -120,7 +120,7 @@ class RemDetails extends HTMLElement {
     } else {
       this.shadowRoot.host.removeAttribute('open');
     }
-    
+
     this._open = open;
   }
 }

@@ -112,8 +112,11 @@ summary {
   font-family: 'Inter Tight', sans-serif;
 }
 
-.talk dd {
+.talk dd,
+.talk dd * {
   color: #c0c0c0;
+}
+.talk dd {
   margin-bottom: 24px;
 }
 
