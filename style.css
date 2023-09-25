@@ -512,3 +512,10 @@ ul li:last-child {
     width: 424px;
   }
 }
+
+/* very big */
+@media screen and (min-width: 1024px) {
+  .sponsors {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
