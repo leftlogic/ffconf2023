@@ -17,6 +17,16 @@
   box-sizing: border-box;
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 h1 {
   /*   TODO: make relative */
   margin: 0 12px;
@@ -240,12 +250,20 @@ ul li:last-child {
   }
 
   & li {
-    padding: 32px 40px;
-    background-color: var(--c-gold);
     list-style: none;
+
+    a {
+      padding: 32px 40px;
+      background-color: var(--c-gold);
+      display: block;
+    }
+
+    & + li {
+      margin-top: 4px;
+    }
   }
 
-  &.platinum li {
+  &.platinum li a {
     padding: 64px 32px;
   }
 
