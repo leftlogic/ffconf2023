@@ -383,7 +383,7 @@ ul li:last-child {
 
   .talk img {
     display: block;
-    opacity: 0.5;
+    /* opacity: 0.5; */
   }
   #intro {
     display: flex;
