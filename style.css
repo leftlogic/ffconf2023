@@ -1,10 +1,25 @@
-[hidden] {
-  display: none !important;
+@font-face {
+  font-family: 'ProtoMono-Regular';
+  src: url('./webfonts/proto-mono-regular.eot');
+  src: url('./webfonts/proto-mono-regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('./webfonts/proto-mono-regular.woff2') format('woff2'),
+    url('./webfonts/proto-mono-regular.woff') format('woff'),
+    url('./webfonts/proto-mono-regular.ttf') format('truetype'),
+    url('./webfonts/proto-mono-regular.svg#youworkforthem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-:root {
-  --c-gold: #d4af37;
-  --i-diamond: url("data:image/svg+xml,%3Csvg viewBox='0 0 9.899 9.899' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m-397.55-23.776 5.774 5.774 5.774-5.774-5.774-5.774-5.774 5.774Zm441.547 0-5.773-5.774-5.773 5.774 5.773 5.774 5.773-5.774ZM4.95 0 9.9 4.95 4.95 9.9 0 4.95Zm-396.726-22.776h430v-2h-430v2Z' fill='%23D4AF37' fill-rule='nonzero'/%3E%3C/svg%3E");
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('./webfonts/intertight-variablefont_wght-webfont.woff2')
+      format('woff2'),
+    url('./webfonts/intertight-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
 
 * {
@@ -15,6 +30,15 @@
     sans-serif;
   color: var(--c-gold);
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:root {
+  --c-gold: #d4af37;
+  --i-diamond: url("data:image/svg+xml,%3Csvg viewBox='0 0 9.899 9.899' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m-397.55-23.776 5.774 5.774 5.774-5.774-5.774-5.774-5.774 5.774Zm441.547 0-5.773-5.774-5.773 5.774 5.773 5.774 5.773-5.774ZM4.95 0 9.9 4.95 4.95 9.9 0 4.95Zm-396.726-22.776h430v-2h-430v2Z' fill='%23D4AF37' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
 
 .sr-only:not(:focus):not(:active) {

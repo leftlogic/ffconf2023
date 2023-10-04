@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ffconf 2023 - UK web and JavaScript conference</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="./webfonts/proto-mono-regular.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="font" crossorigin href="./webfonts/proto-mono-regular.woff2" fetchpriority="high">
+    <link rel="preload" as="font" crossorigin href="./webfonts/intertight-variablefont_wght-webfont.woff2"
+      fetchpriority="high">
     <script type="module" src="./rem-details.js" async></script>
+    <link rel="stylesheet" href="style.css">
+
     <!-- <script type="x-disabled" src="./when-do.mjs" async defer></script> -->
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -34,11 +34,13 @@
     <meta property="og:url" content="https://ffconf.org/">
     <meta property="og:title" content="ffconf 🌟 UK web conference since 2009">
     <meta property="og:description" content="ffconf - the UK's best JavaScript and Web conference in Brighton.">
+    <meta name="description" content="ffconf - the UK's best JavaScript and Web conference in Brighton.">
     <meta property="og:image" content='https://2023.ffconf.org/images/2023-twitter-card.jpg' />
 
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#000000">
+
   </head>
 
   <body>
@@ -99,7 +101,7 @@
             <p class="title">Imposter syndrome, overworking, and working environments <span title="given by">/</span>
               <a href="https://ambershand.co.uk/" class="name">Amber Shand</a>
             </p>
-            <img src="/images/8-amber.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Amber Shand" src="/images/8-amber.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -117,7 +119,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://maggieappleton.com/">Maggie Appleton</a>
             </p>
-            <img src="/images/4-maggie.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Maggie Appleton" src="/images/4-maggie.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">She/her</dt>
@@ -138,7 +140,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://www.jonathanfielding.com/">Jonathan Fielding</a>
             </p>
-            <img src="/images/6-jonathan.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Jonathan Fielding" src="/images/6-jonathan.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -156,9 +158,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://www.marquisdegeek.com/">Steven Goodwin</a>
             </p>
-            <img
-              title="Who is this? Can you guess? If you really want to know, just drop us an email, otherwise it's a surprise for a later date!"
-              src="/images/2-steven.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Steven Goodwin" src="/images/2-steven.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -176,7 +176,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://ireaderinokun.com/">Ire Aderinokun</a>
             </p>
-            <img src="/images/5-ire.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Ire Aderinokun" src="/images/5-ire.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -195,7 +195,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://gericci.me/">Angela Ricci</a>
             </p>
-            <img src="/images/7-angela.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Angela Ricci" src="/images/7-angela.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -214,9 +214,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://ohhelloana.blog/">Ana Rodrigues</a>
             </p>
-            <img
-              title="Who is this? Can you guess? If you really want to know, just drop us an email, otherwise it's a surprise for a later date!"
-              src="/images/3-ana.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Ana Rodrigues" src="/images/3-ana.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -236,9 +234,7 @@
               <span title="given by">/</span>
               <a class="name" href="https://whitep4nth3r.com/">Salma Alam-Naylor</a>
             </p>
-            <img
-              title="Who is this? Can you guess? If you really want to know, just drop us an email, otherwise it's a surprise for a later date!"
-              src="/images/1-salma.jpg">
+            <img height="256" width="256" loading="lazy" alt="Photo of Salma Alam-Naylor" src="/images/1-salma.jpg">
             <rem-details>
               <dl slot="details">
                 <dt class="icon talk">The talk</dt>
@@ -295,23 +291,26 @@
           <div class="sponsor platinum">
             <h3>Headline</h3>
             <ol>
-              <li><a href="https://web.dev"><img src="/images/sponsors/google.png"></a></li>
+              <li><a href="https://web.dev"><img loading="lazy" alt="Google" width="288.8" height="58" width=""
+                    src="/images/sponsors/google.png"></a></li>
             </ol>
           </div>
 
           <div class="sponsor">
             <h3>Day</h3>
             <ol>
-              <li><a href="https://webmonetization.org/docs"><img src="/images/sponsors/ilf.svg"></a></li>
-              <li><a href="https://jsbin.com/"><img src="/images/sponsors/jsbin.svg"></a></li>
+              <li><a href="https://webmonetization.org/docs"><img loading="lazy" alt="Interledger Foundation"
+                    src="/images/sponsors/ilf.svg"></a></li>
+              <li><a href="https://jsbin.com/"><img loading="lazy" alt="JS Bin" src="/images/sponsors/jsbin.svg"></a>
+              </li>
             </ol>
           </div>
 
           <div class="sponsor">
             <h3>Scholarships</h3>
             <ol>
-              <li><a href="https://www.legalandgeneral.com/careers/legal-and-general-life/"><img
-                    src="/images/sponsors/landg.svg"></a></li>
+              <li><a href="https://www.legalandgeneral.com/careers/legal-and-general-life/"><img loading="lazy"
+                    alt="Legal and General" src="/images/sponsors/landg.svg"></a></li>
             </ol>
           </div>
         </div>
