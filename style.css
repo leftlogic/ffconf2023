@@ -372,11 +372,11 @@ ul li:last-child {
   display: none;
   grid-area: a;
   width: 100%;
-  cursor: help;
+  /* cursor: help; */
   border: 4px solid var(--c-gold);
   position: relative;
 
-  &:after {
+  DISABLED_&:after {
     content: '';
     height: 100%;
     width: 100%;
@@ -524,14 +524,15 @@ ul li:last-child {
     display: grid;
     gap: 32px 64px;
     grid-template-areas:
-      'a b'
+      'time title'
+      /* 'a b' */
       'a c';
     /*     grid-template-columns: 326px 1fr; */
     grid-template-columns: 256px 1fr;
   }
 
   #schedule li.break {
-    grid-template-areas: 'a b';
+    grid-template-areas: 'time title';
   }
 
   rem-details {
@@ -539,7 +540,7 @@ ul li:last-child {
   }
 
   #schedule .time {
-    grid-area: a;
+    grid-area: time;
     max-width: 326px;
     align-self: start;
   }
@@ -549,13 +550,13 @@ ul li:last-child {
   }
 
   #schedule .title {
-    grid-area: b;
+    grid-area: title;
     /* width: 100%; */
     margin-top: 0px;
   }
 
   .time {
-    width: 424px;
+    /* width: 424px; */
   }
 }
 
