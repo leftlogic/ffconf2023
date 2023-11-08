@@ -427,7 +427,7 @@ ul li:last-child {
     justify-content: end;
 
     & > a {
-      width: 400px;
+      width: 300px;
     }
 
     &:before {
